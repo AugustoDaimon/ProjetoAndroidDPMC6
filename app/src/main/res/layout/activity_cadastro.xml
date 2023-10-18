@@ -10,18 +10,24 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:icon="@android:drawable/ic_input_delete" />
+            <ImageButton
+                android:id="@+id/btn_voltar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/voltar_icon"
+                android:backgroundTint="@color/white"
+                android:contentDescription="Botão Voltar" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Dados do Perfil"
-                android:textAlignment="center" />
+                android:textSize="22sp"
+                android:gravity="center"/>
 
         </LinearLayout>
 
