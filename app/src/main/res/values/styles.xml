@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SeekBar_ProgCadastro" parent="Widget.AppCompat.SeekBar">
+        <item name="android:progressDrawable">@drawable/custom_seekbar_progcadastro</item>
+        <item name="android:thumb">@drawable/custom_seekbar_selector_progcadastro</item>
+        <item name="android:progress">0</item>
+        <item name="android:max">100</item>
+    </style>
+</resources>
