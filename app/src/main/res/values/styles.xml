@@ -6,4 +6,21 @@
         <item name="android:progress">0</item>
         <item name="android:max">100</item>
     </style>
+
+    <style name="TextView_AvisoFormat" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:font">@font/Langar</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:drawablePadding">6dp</item>
+    </style>
+
+    <style name="TextView_AvisoInfo" parent="TextView_AvisoFormat">
+        <item name="android:drawableLeft">@drawable/ic_info_18</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="TextView_AvisoErro" parent="TextView_AvisoFormat">
+        <item name="android:drawableLeft">@drawable/ic_error_18</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
 </resources>
