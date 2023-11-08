@@ -12,34 +12,41 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp">
 
             <ImageButton
                 android:id="@+id/btnVoltar"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/voltar_icon"
+                android:src="@drawable/ic_voltar"
                 android:backgroundTint="@color/white"
                 android:contentDescription="Botão Voltar" />
 
             <TextView
+                android:id="@+id/tituloCadastro"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:text="Dados do Perfil"
-                android:textSize="22sp"
-                android:gravity="center"/>
+                android:layout_alignParentTop="true"
+                android:textSize="28sp"
+                android:gravity="center_horizontal|center_vertical"/>
 
-        </LinearLayout>
+            <SeekBar
+                android:id="@+id/SeekBar_ProgCadastro"
+                style="@style/SeekBar_ProgCadastro"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/tituloCadastro"
+                android:layout_marginHorizontal="70dp"/>
 
-        <SeekBar
-            style="@style/SeekBar_ProgCadastro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="70dp"/>
+        </RelativeLayout>
+
+
     </LinearLayout>
 
     <androidx.fragment.app.FragmentContainerView
@@ -48,12 +55,11 @@
         android:layout_height="400dp"
         android:layout_marginTop="26dp"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnContinuar"
         android:layout_width="193dp"
         android:layout_height="wrap_content"
         android:text="Continuar"
         android:layout_gravity="center_horizontal"
-        android:backgroundTint="@color/bg_botoes_cadastro"
-        android:textColor="@color/black"/>
+        android:background="@drawable/background_color2"/>
 </LinearLayout>
