@@ -12,29 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nutzen"
         tools:targetApi="31">
-        <activity
-            android:name=".MainActivity14"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity13"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity12"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity11"
-            android:exported="false" />
-        <activity
-            android:name=".Cadastro.CadastroActivity"
 
-            android:name=".MainActivity6"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity5"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity4"
-            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -25,6 +25,8 @@ public class CadastroActivity extends AppCompatActivity {
     private Cadastro1NomeFragment fragCadastro1;
     private Cadastro2EmailSenhaFragment fragCadastro2;
     private Cadastro3GeneroFragment fragCadastro3;
+    private Cadastro4DataNascFragment fragCadastro4;
+    private Cadastro5FisicoFragment fragCadastro5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,8 @@ public class CadastroActivity extends AppCompatActivity {
         fragCadastro1 = new Cadastro1NomeFragment();
         fragCadastro2 = new Cadastro2EmailSenhaFragment();
         fragCadastro3 = new Cadastro3GeneroFragment();
+        fragCadastro4 = new Cadastro4DataNascFragment();
+        fragCadastro5 = new Cadastro5FisicoFragment();
 
         // Criação do FragmentManager e Adição do fragmento inicial ao Fragment Container View
         FragmentManager frag_manager = getSupportFragmentManager();
@@ -64,6 +68,13 @@ public class CadastroActivity extends AppCompatActivity {
                     novoUsuario.setEmail(fragCadastro2.getCampoEmail());
                     novoUsuario.setSenha(fragCadastro2.getCampoSenha());
                     loadFragment(fragCadastro3, "fragCadastro3");
+                    break;
+                case 3:
+                    // !!!!!!! FAZER setDataNasc
+                    loadFragment(fragCadastro4, "fragCadastro4");
+                    break;
+                case 4:
+                    loadFragment(fragCadastro5, "fragCadastro5");
                     break;
                 // Futuros Fragmentos
                 default:

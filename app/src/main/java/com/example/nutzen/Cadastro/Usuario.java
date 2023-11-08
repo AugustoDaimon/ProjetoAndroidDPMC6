@@ -9,7 +9,6 @@ public class Usuario {
     private String senha;
     private String email;
     private char genero;
-
     private LocalDate dataNasc;
     private double altura;
     private double peso;

@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/GanharMassa_cadastro">
+    android:background="@drawable/ganhar_massa_cadastro">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_continuar"
         android:layout_width="193dp"
         android:layout_height="40dp"
         android:background="@drawable/background_color2"
-        android:fontFamily="@font/Langar"
+        android:fontFamily="@font/langarfont"
         android:text="Continuar"
         android:textAllCaps="false"
         android:textColor="@color/black"
@@ -21,6 +21,6 @@
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.762">
+        app:layout_constraintVertical_bias="0.762"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cadastro.Cadastro5FisicoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textDados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|center"
+            android:text="Dados do Objetivo"
+            android:textSize="23dp" />
+
+        <TextView
+            android:id="@+id/textInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:gravity="top|center"
+            android:textSize="19dp"
+            android:text="A seguir iremos precisar de mais algumas informações:"
+            tools:layout_editor_absoluteX="46dp"
+            tools:layout_editor_absoluteY="169dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textALtura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Altura"
+                tools:layout_editor_absoluteX="53dp"
+                tools:layout_editor_absoluteY="264dp" />
+
+            <EditText
+                android:id="@+id/et_altura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                tools:layout_editor_absoluteX="116dp"
+                tools:layout_editor_absoluteY="246dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textMassa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Massa:"
+                tools:layout_editor_absoluteX="47dp"
+                tools:layout_editor_absoluteY="328dp"
+                />
+
+            <EditText
+                android:id="@+id/et_massa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                tools:layout_editor_absoluteX="116dp"
+                tools:layout_editor_absoluteY="311dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

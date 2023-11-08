@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/PerderMassa_cadastro">
+    android:background="@drawable/perder_massa_cadastro">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_continuar"
         android:layout_width="193dp"
         android:layout_height="40dp"
         android:background="@drawable/background_color2"
-        android:fontFamily="@font/Langar"
+        android:fontFamily="@font/langarfont"
         android:text="Continuar"
         android:textAllCaps="false"
         android:textColor="@color/black"
@@ -20,6 +20,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.752">
+        app:layout_constraintVertical_bias="0.752"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -85,7 +85,7 @@
             android:layout_height="46dp"
             android:layout_gravity="center_vertical"
             android:contentDescription="Ícone do Google"
-            android:src="@drawable/google" />
+            android:src="@drawable/google_img" />
 
         <Button
             android:layout_width="0dp"
