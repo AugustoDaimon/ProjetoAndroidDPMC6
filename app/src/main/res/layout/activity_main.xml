@@ -12,7 +12,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/Langar"
+        android:fontFamily="@font/langar"
         android:gravity="center"
         android:text="Bem vindo (a) de volta!"
         android:textSize="22sp" />
@@ -25,16 +25,17 @@
         android:background="@drawable/background_color"
         android:textColor="@color/black"
         android:textAllCaps="false"
-        android:fontFamily="@font/Langar"
+        android:fontFamily="@font/langar"
         android:text="Login" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/BtnCadastrar"
         android:layout_width="230dp"
         android:layout_height="40dp"
         android:layout_marginTop="15dp"
         android:textColor="@color/black"
         android:background="@drawable/background_color"
-        android:fontFamily="@font/Langar"
+        android:fontFamily="@font/langar"
         android:textAllCaps="false"
         android:text="Cadastrar"
         tools:layout_editor_absoluteX=""

@@ -9,7 +9,7 @@
 
     <style name="TextView_AvisoFormat" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">14sp</item>
-        <item name="android:font">@font/Langar</item>
+        <item name="android:font">@font/langar</item>
         <item name="android:textAlignment">center</item>
         <item name="android:drawablePadding">6dp</item>
     </style>
