@@ -1,8 +1,10 @@
-package com.example.nutzen;
+package com.example.nutzen.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.nutzen.R;
 
 public class MainActivity14 extends AppCompatActivity {
 

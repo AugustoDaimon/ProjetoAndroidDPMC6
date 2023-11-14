@@ -20,21 +20,14 @@ import com.example.nutzen.R;
  */
 public class Cadastro2EmailSenhaFragment extends Fragment {
 
-    EditText campoEmail; // TODO: FAZER VALIDAÇÃO
-    EditText campoSenha; // TODO: CONTEUDO SENSIVEL! FAZER OCULTAÇÂO E TMB VALIDACAO
+    private EditText campoEmail; // TODO: FAZER VALIDAÇÃO
+    private EditText campoSenha; // TODO: CONTEUDO SENSIVEL! FAZER OCULTAÇÂO E TMB VALIDACAO
 
 
     public Cadastro2EmailSenhaFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @return A new instance of fragment Cadastro2EmailSenhaFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static Cadastro2EmailSenhaFragment newInstance(String param1, String param2) {
         Cadastro2EmailSenhaFragment fragment = new Cadastro2EmailSenhaFragment();
         Bundle args = new Bundle();

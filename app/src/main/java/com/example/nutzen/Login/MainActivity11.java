@@ -1,10 +1,12 @@
-package com.example.nutzen;
+package com.example.nutzen.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.nutzen.R;
 
 public class MainActivity11 extends AppCompatActivity {
 

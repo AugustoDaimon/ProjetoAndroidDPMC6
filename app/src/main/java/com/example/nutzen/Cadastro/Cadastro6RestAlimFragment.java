@@ -16,20 +16,20 @@ import com.example.nutzen.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Cadastro3GeneroFragment#newInstance} factory method to
+ * Use the {@link Cadastro6RestAlimFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Cadastro3GeneroFragment extends Fragment {
+public class Cadastro6RestAlimFragment extends Fragment {
 
     private RadioGroup radioGroup;
     private RadioButton selectedRadioButton;
 
-    public Cadastro3GeneroFragment() {
+    public Cadastro6RestAlimFragment() {
         // Required empty public constructor
     }
 
-    public static Cadastro3GeneroFragment newInstance(String param1, String param2) {
-        Cadastro3GeneroFragment fragment = new Cadastro3GeneroFragment();
+    public static Cadastro6RestAlimFragment newInstance(String param1, String param2) {
+        Cadastro6RestAlimFragment fragment = new Cadastro6RestAlimFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -44,7 +44,7 @@ public class Cadastro3GeneroFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cadastro_3_genero, container, false);
+        return inflater.inflate(R.layout.fragment_cadastro_6_rest_alim, container, false);
     }
 
     @Override
@@ -53,15 +53,15 @@ public class Cadastro3GeneroFragment extends Fragment {
         selectedRadioButton = (RadioButton) getView().findViewById(radioGroup.getCheckedRadioButtonId());
     }
 
-    public char getOpcaoGenero() {
-        if(selectedRadioButton.getId() == (R.id.radioButtonFem)){
-            return 'F';
+    public boolean getOpcaoRestricaoAlimentar() {
+        if(selectedRadioButton.getId() == (R.id.radioButtonSim)){
+            return true;
         }else{
-            if(selectedRadioButton.getId() == (R.id.radioButtonMasc)){
-                return 'M';
+            if(selectedRadioButton.getId() == (R.id.radioButtonNao)){
+                return false;
             }else{
-                // TODO: FAZER MENSAGEM PEDINDO PARA SELECIONAR UM!
-                return 'M'; // TODO MUDAR ISSO TMB
+                // TODO: FAZER MENSAGEM PEDINDO PARA SELECIONAR AO MENOS UM!
+                return false; // TODO MUDAR ISSO TMB
             }
         }
     }

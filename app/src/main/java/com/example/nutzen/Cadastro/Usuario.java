@@ -1,6 +1,7 @@
 package com.example.nutzen.Cadastro;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 // Classe para instanciação de Usuario
 
@@ -8,12 +9,15 @@ public class Usuario {
     private String nome;
     private String senha;
     private String email;
+
+    // Genero == F -> Feminino | Genero == M -> Masculino
     private char genero;
-    private LocalDate dataNasc;
+    private Date dataNasc;
+    private int idade;
     private double altura;
     private double peso;
 
-    // TODO: Transformar em bool? ou usar como char msm?
+    // Objetivo == P -> Perder peso | Objetivo == G -> Ganhar peso
     private char objetivo;
 
     private boolean restricoesAlimentares;
@@ -22,6 +26,7 @@ public class Usuario {
     // private ArrayList<restricaoAlimentar> itensRestricoesAlimentares
 
 
+    // GETTERS AND SETTERS
     public String getNome() {
         return nome;
     }
@@ -54,12 +59,16 @@ public class Usuario {
         this.genero = genero;
     }
 
-    public LocalDate getDataNasc() {
-        return dataNasc;
+    public void setDataNasc(Date dataNasc) {
+        this.dataNasc = dataNasc;
     }
 
-    public void setDataNasc(LocalDate dataNasc) {
-        this.dataNasc = dataNasc;
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
     }
 
     public double getAltura() {
