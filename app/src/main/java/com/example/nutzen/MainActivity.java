@@ -29,7 +29,9 @@ public class MainActivity extends AppCompatActivity {
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, CadastroActivity.class));
+                //DEBUGING PRINCIPAL
+                startActivity(new Intent(MainActivity.this, TempViewPagerPrincipalActivity.class));
+                //startActivity(new Intent(MainActivity.this, CadastroActivity.class));
             }
         });
     }

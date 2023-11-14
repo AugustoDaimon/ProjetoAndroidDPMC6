@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import com.example.nutzen.Cadastro8ObjetivoFragment;
 import com.example.nutzen.MainActivity;
 import com.example.nutzen.R;
+import com.example.nutzen.TempViewPagerPrincipalActivity;
 
 public class CadastroActivity extends AppCompatActivity {
 
