@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- AVISO - EM CASO DE ERRO, VER SE ACTIVITY ESTA DECLARADA AQUI!-->
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nutzen"
         tools:targetApi="31">
-
+        <activity
+            android:name=".TempViewPagerPrincipalActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -24,8 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".Cadastro.CadastroActivity"/>
+        <activity android:name=".Cadastro.CadastroActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

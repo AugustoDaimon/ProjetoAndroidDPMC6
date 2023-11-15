@@ -18,7 +18,7 @@
             android:text="Qual a sua data de nascimento?"
             android:gravity="center"/>
 
-        <DatePicker android:id="@+id/datanascimento"
+        <DatePicker android:id="@+id/dataNascimento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:datePickerMode="spinner"
