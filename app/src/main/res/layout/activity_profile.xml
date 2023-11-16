@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageProfile"
+        android:layout_width="183dp"
+        android:layout_height="199dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/_361728" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="273dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="2dp"
+        android:layout_toEndOf="@+id/imageProfile"
+        android:text="Objetivo: perder massa"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="212dp"
+        android:layout_height="31dp"
+        android:layout_below="@id/imageProfile"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="-91dp"
+        android:layout_marginEnd="62dp"
+        android:layout_toEndOf="@+id/imageProfile"
+        android:text="Altura: 1,70"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textDetails"
+        android:layout_width="206dp"
+        android:layout_height="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="163dp"
+        android:layout_marginEnd="68dp"
+        android:layout_toEndOf="@+id/imageProfile"
+        android:text="Massa: 70kg"
+        android:textSize="25dp" />
+
+    <ListView
+        android:id="@+id/listFavoriteDishes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textDetails"
+        android:layout_marginTop="118dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="253dp"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="64dp"
+        android:layout_toEndOf="@+id/imageProfile"
+        android:text="Nome do usuário:"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="151dp"
+        android:text="Pratos Favoritos"
+        android:textSize="25dp" />
+
+</RelativeLayout>
