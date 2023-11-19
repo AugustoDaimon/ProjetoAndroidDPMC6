@@ -15,6 +15,14 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="20dp">
 
+            <Button
+                android:id="@+id/buttonRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R"
+                android:layout_alignParentLeft="true"
+                />
+
             <TextView style="?android:textAppearanceMedium"
                 android:id="@+id/tituloRefeicao"
                 android:padding="16dp"
@@ -26,9 +34,10 @@
                 android:text="Teste" />
 
             <Button
+                android:id="@+id/buttonLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=">"
+                android:text="L"
                 android:layout_alignParentRight="true"
                 />
 
@@ -37,10 +46,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_below="@id/tituloRefeicao"
+                app:tabTextColor="@android:color/transparent"
+                app:tabBackground="@drawable/tabpage_selector_tiporefeicao"
                 app:tabGravity="center"
                 android:background="@color/white"
+                android:layout_below="@id/tituloRefeicao"
                 app:tabIndicatorHeight="0dp" />
+
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/pager"
                 android:layout_below="@+id/tab_layout"
