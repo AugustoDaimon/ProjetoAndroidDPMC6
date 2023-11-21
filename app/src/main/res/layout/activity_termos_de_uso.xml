@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="start"
+        android:paddingTop="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <ImageButton
+                android:id="@+id/btnVoltar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:backgroundTint="@color/white"
+                android:contentDescription="Botão Voltar"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_voltar" />
+
+            <TextView
+                android:id="@+id/tituloCadastro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Termos de uso"
+                android:textColor="@color/black"
+                android:textSize="28sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/titulo_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="50dp"
+            android:text="Bem-vindo ao Nutzen!"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text1_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ao utilizar nosso aplicativo, você concorda com os seguintes termos. Por favor, leia atentamente antes de prosseguir:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_termos"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/text2_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Objetivo do Aplicativo"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text1_termos"/>
+
+        <TextView
+            android:id="@+id/text3_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="O Nutzen foi desenvolvido para auxiliar usuários no controle da dieta e prática de exercícios, visando a promoção da saúde e bem-estar."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text2_termos"
+            />
+
+        <TextView
+            android:id="@+id/text4_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Responsabilidades do Usuário:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text3_termos" />
+
+        <TextView
+            android:id="@+id/text5_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ao utilizar o aplicativo, você assume total responsabilidade por suas escolhas de dieta e exercício.
+Consulte um profissional de saúde antes de iniciar qualquer programa de exercícios ou fazer alterações significativas em sua dieta."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text4_termos"
+            />
+
+        <TextView
+            android:id="@+id/text6_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dados Pessoais:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text5_termos" />
+
+        <TextView
+            android:id="@+id/text7_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Para proporcionar uma experiência personalizada, o Nutzen pode coletar dados pessoais. Essas informações serão tratadas de acordo com nossa Política de Privacidade.
+Não compartilharemos suas informações pessoais com terceiros sem seu consentimento."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text6_termos" />
+
+        <TextView
+            android:id="@+id/text8_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aconselhamento Profissional:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text7_termos" />
+
+        <TextView
+            android:id="@+id/text9_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="O Nutzen não substitui o aconselhamento de profissionais de saúde qualificados. Consulte um nutricionista, médico ou personal trainer para orientações específicas ao seu caso."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text8_termos" />
+
+        <TextView
+            android:id="@+id/text10_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Segurança da Conta:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text9_termos" />
+
+        <TextView
+            android:id="@+id/text11_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Você é responsável por manter a segurança de sua conta. Não compartilhe suas credenciais com terceiros.
+Informe-nos imediatamente caso detecte atividades suspeitas em sua conta."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text10_termos" />
+
+        <TextView
+            android:id="@+id/text12_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Conteúdo Gerado pelo Usuário:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text11_termos" />
+
+        <TextView
+            android:id="@+id/text13_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ao compartilhar conteúdo no aplicativo, você concede ao Nutzen o direito de usar, modificar e distribuir esse conteúdo.
+Não envie conteúdo ofensivo, ilegal ou que viole os direitos de terceiros."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text12_termos" />
+
+        <TextView
+            android:id="@+id/text14_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Atualizações e Modificações:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text13_termos" />
+
+        <TextView
+            android:id="@+id/text15_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reservamo-nos o direito de atualizar, modificar ou encerrar o aplicativo a qualquer momento, visando melhorias ou necessidades técnicas.
+Informaremos sobre alterações significativas nos termos ou na funcionalidade do aplicativo."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text14_termos" />
+
+        <TextView
+            android:id="@+id/text16_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rescisão:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text15_termos" />
+
+        <TextView
+            android:id="@+id/text17_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="O Nutzen pode rescindir seu acesso ao serviço, a seu critério, caso haja violação destes termos."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text16_termos" />
+
+        <TextView
+            android:id="@+id/text18_termos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ao continuar a usar o Nutzen, você concorda com estes termos. Se tiver dúvidas ou preocupações, entre em contato conosco.
+Obrigado por escolher o Nutzen para ajudar em sua jornada de saúde e bem-estar!"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text17_termos"/>
+
+
+    </LinearLayout>
+</ScrollView>

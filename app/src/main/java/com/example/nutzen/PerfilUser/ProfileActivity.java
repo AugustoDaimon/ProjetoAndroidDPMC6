@@ -1,3 +1,7 @@
+package com.example.nutzen.PerfilUser;
+
+import com.example.nutzen.PerfilUser.UserProfile;
+
 public class ProfileActivity extends AppCompatActivity {
 
     private UserProfile userProfile;
