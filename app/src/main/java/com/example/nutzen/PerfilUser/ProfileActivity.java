@@ -1,6 +1,14 @@
 package com.example.nutzen.PerfilUser;
 
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.nutzen.PerfilUser.UserProfile;
+import com.example.nutzen.R;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -18,6 +26,7 @@ public class ProfileActivity extends AppCompatActivity {
         TextView textDetails = findViewById(R.id.textDetails);
         ListView listFavoriteDishes = findViewById(R.id.listFavoriteDishes);
 
+        /*
         imageProfile.setImageResource(userProfile.getGender() == 0 ? R.drawable.male_profile_image : R.drawable.female_profile_image);
 
         textName.setText(userProfile.getName());
@@ -29,6 +38,6 @@ public class ProfileActivity extends AppCompatActivity {
 
         List<String> favoriteDishes = userProfile.getFavoriteDishes();
         FavoriteDishesAdapter adapter = new FavoriteDishesAdapter(this, favoriteDishes);
-        listFavoriteDishes.setAdapter(adapter);
+        listFavoriteDishes.setAdapter(adapter);*/
     }
 }

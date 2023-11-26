@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
 
-    <com.example.nutzen.CustomViews.PratosCardView
+    <com.example.nutzen.PratosDoDia.PratosCardView
         android:layout_width="300dp"
         android:layout_height="150dp"
         app:cardCornerRadius="20dp"/>

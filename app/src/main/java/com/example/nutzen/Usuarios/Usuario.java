@@ -1,4 +1,4 @@
-package com.example.nutzen.Cadastro;
+package com.example.nutzen.Usuarios;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -24,6 +24,12 @@ public class Usuario {
 
     // TODO: Criar objeto do tipo restrição alimentar
     // private ArrayList<restricaoAlimentar> itensRestricoesAlimentares
+
+
+    // METODOS
+    public double getIMC() {
+        return (this.peso/((this.altura/100)*(this.altura/100)));
+    }
 
 
     // GETTERS AND SETTERS

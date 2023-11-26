@@ -1,4 +1,4 @@
-package com.example.nutzen;
+package com.example.nutzen.PratosDoDia;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

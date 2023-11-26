@@ -1,5 +1,7 @@
 package com.example.nutzen.Cadastro;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,8 +12,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.nutzen.R;
+
+import java.util.Calendar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,11 +66,59 @@ public class Cadastro5FisicoFragment extends Fragment {
         campoMassa = (EditText) getView().findViewById(R.id.et_massa);
     }
 
-    // TODO: Verificar se é Double msm, se nao for throw um alert
     public double getCampoAltura() {
-        return Double.parseDouble(campoAltura.getText().toString());
+        AlertDialog.Builder builderInputValidation = new AlertDialog.Builder(getActivity());
+        builderInputValidation.setTitle("Altura inválida!");
+        builderInputValidation.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
+
+        try {
+            double altura = Double.parseDouble(campoAltura.getText().toString());
+
+            if(altura < 30 || altura > 300) {
+                builderInputValidation.show();
+            }else {
+                return altura;
+            }
+
+        }catch (NumberFormatException numEx){
+            builderInputValidation.show();
+            return 0;
+        }
+        catch (Exception ex){
+            Toast alertException = Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_LONG);
+        }
+        return 0;
     }
     public double getCampoMassa() {
-        return Double.parseDouble(campoMassa.getText().toString());
+        AlertDialog.Builder builderInputValidation = new AlertDialog.Builder(getActivity());
+        builderInputValidation.setTitle("Massa inválida!");
+        builderInputValidation.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
+
+        try {
+            double massa = Double.parseDouble(campoMassa.getText().toString());
+
+            if(massa < 15) {
+                builderInputValidation.show();
+            }else {
+                return massa;
+            }
+
+        }catch (NumberFormatException numEx){
+            builderInputValidation.show();
+            return 0;
+        }
+        catch (Exception ex){
+            Toast alertException = Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_LONG);
+            alertException.show();
+        }
+        return 0;
     }
 }

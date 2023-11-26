@@ -1,4 +1,4 @@
-package com.example.nutzen;
+package com.example.nutzen.PratosDoDia;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,7 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.nutzen.R;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 

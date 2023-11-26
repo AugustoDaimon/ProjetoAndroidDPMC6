@@ -1,5 +1,7 @@
 package com.example.nutzen.Cadastro;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.example.nutzen.R;
 
@@ -54,15 +57,33 @@ public class Cadastro3GeneroFragment extends Fragment {
     }
 
     public char getOpcaoGenero() {
-        if(selectedRadioButton.getId() == (R.id.radioButtonFem)){
-            return 'F';
-        }else{
-            if(selectedRadioButton.getId() == (R.id.radioButtonMasc)){
-                return 'M';
-            }else{
-                // TODO: FAZER MENSAGEM PEDINDO PARA SELECIONAR UM!
-                return 'M'; // TODO MUDAR ISSO TMB
+        try {
+            selectedRadioButton = (RadioButton) getView().findViewById(radioGroup.getCheckedRadioButtonId());
+
+            AlertDialog.Builder builderInputValidation = new AlertDialog.Builder(getActivity());
+            builderInputValidation.setTitle("Selecione uma das opções!!");
+            builderInputValidation.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                }
+            });
+
+            if(selectedRadioButton.getId() == -1) { // Se nenhuma opção for selecionada
+                builderInputValidation.show();
+            }else {
+                if (selectedRadioButton.getId() == (R.id.radioButtonFem)) {
+                    return 'F';
+                } else {
+                    if (selectedRadioButton.getId() == (R.id.radioButtonMasc)) {
+                        return 'M';
+                    }
+                }
             }
+
+        }catch (Exception ex){
+            Toast alertException = Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_LONG);
+            alertException.show();
         }
+        return 0;
     }
 }

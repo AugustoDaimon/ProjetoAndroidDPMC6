@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Nutzen"
         tools:targetApi="31">
         <activity
-            android:name=".TempViewPagerPrincipalActivity"
+            android:name=".PratosDoDia.TempViewPagerPrincipalActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -25,6 +25,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".Cadastro.CadastroActivity" />
+        <activity android:name=".Cadastro.Cadastro9GanharActivity" />
+        <activity android:name=".Cadastro.Cadastro9PerderActivity" />
+
+        <activity android:name=".Login.LoginActivity" />
+        <activity android:name=".Login.MainActivity13" />
+        <activity android:name=".Login.MainActivity14" />
+        <activity android:name=".Login.RecuperarSenhaActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

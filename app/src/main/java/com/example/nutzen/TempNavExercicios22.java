@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link BlankFragment4#newInstance} factory method to
+ * Use the {@link TempNavExercicios22#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BlankFragment4 extends Fragment {
+public class TempNavExercicios22 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +24,7 @@ public class BlankFragment4 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public BlankFragment4() {
+    public TempNavExercicios22() {
         // Required empty public constructor
     }
 
@@ -34,11 +34,11 @@ public class BlankFragment4 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment BlankFragment4.
+     * @return A new instance of fragment TempNavExercicios22.
      */
     // TODO: Rename and change types and number of parameters
-    public static BlankFragment4 newInstance(String param1, String param2) {
-        BlankFragment4 fragment = new BlankFragment4();
+    public static TempNavExercicios22 newInstance(String param1, String param2) {
+        TempNavExercicios22 fragment = new TempNavExercicios22();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +59,6 @@ public class BlankFragment4 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank4, container, false);
+        return inflater.inflate(R.layout.fragment_temp_nav_exercicios22, container, false);
     }
 }

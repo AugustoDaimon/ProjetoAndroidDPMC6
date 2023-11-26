@@ -4,15 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.SeekBar;
+import android.widget.Toast;
 
-import com.example.nutzen.Cadastro8ObjetivoFragment;
-import com.example.nutzen.MainActivity;
+import com.example.nutzen.Cadastro.Cadastro8ObjetivoFragment;
 import com.example.nutzen.R;
-import com.example.nutzen.TempViewPagerPrincipalActivity;
+import com.example.nutzen.Usuarios.Usuario;
+
+import java.util.Date;
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -23,7 +27,8 @@ public class CadastroActivity extends AppCompatActivity {
     // Declaração de Botão Continuar e SeekBar
     private ImageButton btnVoltar;
     private Button btnContinuar;
-
+    private SeekBar skbProgressoCadastro;
+    private int progressoCadastro = 0;
 
     // Declaração dos Fragmentos dos Forms de Cadastro
     private Cadastro1NomeFragment fragCadastro1;
@@ -57,60 +62,110 @@ public class CadastroActivity extends AppCompatActivity {
         FragmentManager frag_manager = getSupportFragmentManager();
         getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerViewFormCadastro, fragCadastro1, "fragCadastro1").addToBackStack("fragCadastro1").commit();
 
+        // Instancia SeekBar
+        skbProgressoCadastro = (SeekBar) findViewById(R.id.SeekBar_ProgCadastro);
+        skbProgressoCadastro.setMax(100);
+
         // Botão Voltar: Remove o ultimo fragmento na pilha
         btnVoltar = findViewById(R.id.btnVoltar);
         btnVoltar.setOnClickListener(view -> {
+            //
             if (fragmentosNaPilha > 1) {
-                frag_manager.popBackStackImmediate(); // TODO IMPORTANTE : Perde os dados escritos nos TextEdit ao voltor
+                frag_manager.popBackStackImmediate();
                 fragmentosNaPilha--;
             }
-            // TODO IMPORTANTE : Se estiver vazia Voltar para main
+            // TODO: Se estiver vazia Voltar para main
+
+            // Atualiza a SeekBar
+            progressoCadastro =  fragmentosNaPilha * 100/9;
+            skbProgressoCadastro.setProgress(progressoCadastro);
+            skbProgressoCadastro.refreshDrawableState();
+
+            if(fragmentosNaPilha == 7) { // Para voltar da Tela Objetivos
+                btnContinuar.setVisibility(View.VISIBLE);
+            }
         });
 
         // Botão Continuar: Coleta os dados inseridos e avança para o proximo fragmento
         btnContinuar = findViewById(R.id.btnContinuar);
         btnContinuar.setOnClickListener(view -> {
+            // Verifica o Fragmento Atual
+            // Caso esteja no Frag X, pegue os dados nele e vá para o Frag X+1
             switch (fragmentosNaPilha){
-                case 1: // Caso esteja no Frag 1, pegue os dados dele e vá para o Frag 2
-                    novoUsuario.setNome(fragCadastro1.getCampoNome());
-                    loadFragment(fragCadastro2, "fragCadastro2");
+                case 1:
+                    String nome = fragCadastro1.getCampoNome();
+                    if(nome != null) { // Verifica se a validação foi aceita ou não
+                        novoUsuario.setNome(nome);
+                        loadFragment(fragCadastro2, "fragCadastro2");
+                    }
                     break;
                 case 2:
-                    novoUsuario.setEmail(fragCadastro2.getCampoEmail());
-                    novoUsuario.setSenha(fragCadastro2.getCampoSenha()); // TODO? Ideal seria colocar um hash
-                    loadFragment(fragCadastro3, "fragCadastro3");
+                    String email = fragCadastro2.getCampoEmail();
+                    String senha = fragCadastro2.getCampoSenha();
+                    if(email != null && senha != null) {
+                        novoUsuario.setEmail(email);
+                        novoUsuario.setSenha(senha); // TODO Salvar hash da senha
+                        loadFragment(fragCadastro3, "fragCadastro3");
+                    }
                     break;
                 case 3:
-                    novoUsuario.setGenero(fragCadastro3.getOpcaoGenero());
-                    loadFragment(fragCadastro4, "fragCadastro4");
+                    char genero = fragCadastro3.getOpcaoGenero();
+                    if(genero != 0) {
+                        novoUsuario.setGenero(genero);
+                        loadFragment(fragCadastro4, "fragCadastro4");
+                    }
                     break;
                 case 4:
-                    novoUsuario.setDataNasc(fragCadastro4.getDataNascimento());
-                    // TODO? Get Idade
-                    loadFragment(fragCadastro5, "fragCadastro5");
+                    Date dataNasc = fragCadastro4.getDataNascimento(); // Idade é calculada e validada
+                    if(dataNasc != null) {
+                        novoUsuario.setDataNasc(dataNasc);
+                        loadFragment(fragCadastro5, "fragCadastro5");
+                    }
                     break;
                 case 5:
-                    novoUsuario.setAltura(fragCadastro5.getCampoAltura());
-                    novoUsuario.setPeso(fragCadastro5.getCampoMassa());
-                    loadFragment(fragCadastro6, "fragCadastro6");
+                    double altura = fragCadastro5.getCampoAltura();
+                    double massa = fragCadastro5.getCampoMassa();
+                    if(altura != 0 && massa != 0) {
+                        novoUsuario.setAltura(massa);
+                        novoUsuario.setPeso(altura);
+                        loadFragment(fragCadastro6, "fragCadastro6");
+                    }
                     break;
                 case 6:
-                    novoUsuario.setRestricoesAlimentares(fragCadastro6.getOpcaoRestricaoAlimentar());
-                    loadFragment(fragCadastro7, "fragCadastro7");
+                    int codRestricoesAlimentares = fragCadastro6.getOpcaoRestricaoAlimentar();
+                    if(codRestricoesAlimentares != -1){
+                        if((codRestricoesAlimentares == 1)){
+                            novoUsuario.setRestricoesAlimentares(true);
+                            Toast alertException = Toast.makeText(CadastroActivity.this, "Não Implementado", Toast.LENGTH_LONG);
+                            alertException.show();
+                            //loadFragment(fragCadastro7, "fragCadastro7");
+                        }else{
+                            novoUsuario.setRestricoesAlimentares(false);
+                            fragmentosNaPilha++; // Pula o fragCadastro7
+                            loadFragment(fragCadastro8, "fragCadastro8");
+                        }
+                    }
                     break;
                 case 7:
-                    // TODO: pegar Array de Strings com Restricoes selecionadas
+                    // TODO: pegar Array de Strings com Restricoes selecionadas e salvar
                     loadFragment(fragCadastro8, "fragCadastro8");
                     break;
                 case 8:
-                    // TODO Esse daqui é diferente pois não vai botar continuar (A não ser que transformemos buttons em Pseudo RadioButtons)
-                    // TODO IMPORTANTE: Se formos recomendar Objetivos com base no IMC -> Calcular Imc -> Recomendar (If else
-                    // TODO: Enviar para Tela 9 (Esqueci como que manda para outra activity dps faco)
+                    btnContinuar.setVisibility(View.GONE);
+                    // TODO: Se formos recomendar Objetivos com base no IMC -> Calcular Imc -> Recomendar (If else
                     break;
                 default:
                     // Obs Não acho q é para ter default (Ver oq por aqui ou tirar)
                     // Obs Replace pro msm fragmento da erro
                     break;
+            }
+        });
+
+        // Bloquear acesso da SeekBar ao User, sem mudar aparencia (Como ocorre com Enabled=false)
+        skbProgressoCadastro.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
             }
         });
     }
@@ -123,5 +178,10 @@ public class CadastroActivity extends AppCompatActivity {
                 .addToBackStack(tag)
                 .commit();
         fragmentosNaPilha++;
+
+        // Atualiza a SeekBar
+        progressoCadastro =  fragmentosNaPilha * 100/9;
+        skbProgressoCadastro.setProgress(progressoCadastro);
+        skbProgressoCadastro.refreshDrawableState();
     }
 }

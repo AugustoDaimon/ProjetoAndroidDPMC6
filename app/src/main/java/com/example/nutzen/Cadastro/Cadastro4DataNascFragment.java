@@ -1,5 +1,7 @@
 package com.example.nutzen.Cadastro;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,11 +12,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
+import android.widget.RadioButton;
+import android.widget.Toast;
 
 import com.example.nutzen.R;
 
 import java.util.Calendar;
 import java.util.Date;
+
+import java.time.LocalDate;
+import java.time.Period;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -54,18 +61,40 @@ public class Cadastro4DataNascFragment extends Fragment {
     }
 
     public Date getDataNascimento(){
-        int dia = dataNascimento.getDayOfMonth();
-        int mes = dataNascimento.getMonth();
-        int ano = dataNascimento.getYear();
+        try {
+            int dia = dataNascimento.getDayOfMonth();
+            int mes = dataNascimento.getMonth();
+            int ano = dataNascimento.getYear();
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(ano, mes, dia);
+            Calendar calendar = Calendar.getInstance();
+            calendar.set(ano, mes, dia);
 
-        return calendar.getTime();
+            AlertDialog.Builder builderInputValidation = new AlertDialog.Builder(getActivity());
+            builderInputValidation.setTitle("Idade inválida!");
+            builderInputValidation.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                }
+            });
+
+            if(getIdade(ano, mes, dia) < 13) {
+                builderInputValidation.setMessage("A idade minimina permitida é a partir de 13 anos.");
+                builderInputValidation.show();
+            }else {
+                return calendar.getTime();
+            }
+
+        }catch (Exception ex){
+            Toast alertException = Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_LONG);
+            alertException.show();
+        }
+        return null;
     }
 
-    // TODO !!!!!
-    public int getIdade(){
-        return 0;
+    public int getIdade(int ano, int mes, int dia){
+        return Period.between(
+                LocalDate.of(ano, mes, dia),
+                LocalDate.now()
+        ).getYears();
     }
 }

@@ -7,18 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.nutzen.Cadastro.Cadastro1NomeFragment;
 import com.example.nutzen.Cadastro.CadastroActivity;
+import com.example.nutzen.Login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    /*Button botao = (Button) findViewById(R.id.botao);
-
-    botao.setBackgroundResource(R.color.Red);
-    */
-
     Button btnCadastrar;
+    Button btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +21,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnCadastrar = (Button) findViewById(R.id.BtnCadastrar);
+        btnLogin = (Button) findViewById(R.id.BtnLogin);
+
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //DEBUGING PRINCIPAL
-                startActivity(new Intent(MainActivity.this, TempViewPagerPrincipalActivity.class));
-                //startActivity(new Intent(MainActivity.this, CadastroActivity.class));
+                startActivity(new Intent(MainActivity.this, CadastroActivity.class));
+            }
+        });
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
             }
         });
     }

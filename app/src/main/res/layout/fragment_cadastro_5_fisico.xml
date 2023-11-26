@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Altura"
+                android:text="Altura (cm)"
                 tools:layout_editor_absoluteX="53dp"
                 tools:layout_editor_absoluteY="264dp" />
 
@@ -48,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPassword"
+                android:inputType="numberDecimal"
                 tools:layout_editor_absoluteX="116dp"
                 tools:layout_editor_absoluteY="246dp" />
 
@@ -63,7 +63,7 @@
                 android:id="@+id/textMassa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Massa:"
+                android:text="Massa (kg):"
                 tools:layout_editor_absoluteX="47dp"
                 tools:layout_editor_absoluteY="328dp"
                 />
@@ -73,7 +73,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPassword"
+                android:inputType="numberDecimal"
                 tools:layout_editor_absoluteX="116dp"
                 tools:layout_editor_absoluteY="311dp" />
 

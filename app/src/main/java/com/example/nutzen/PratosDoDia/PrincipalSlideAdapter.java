@@ -1,4 +1,4 @@
-package com.example.nutzen;
+package com.example.nutzen.PratosDoDia;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import com.example.nutzen.R;
 
 public class PrincipalSlideAdapter extends FragmentStateAdapter {
     private static final int NUM_TABS = 3;

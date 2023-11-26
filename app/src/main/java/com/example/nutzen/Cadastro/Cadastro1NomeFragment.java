@@ -1,5 +1,7 @@
 package com.example.nutzen.Cadastro;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.nutzen.R;
 
@@ -60,6 +63,31 @@ public class Cadastro1NomeFragment extends Fragment {
 
     // Metodo usado por CadastroActivity para pegar o valor do texto no campo de nome
     public String getCampoNome() {
-        return campoNome.getText().toString();
+        try {
+            AlertDialog.Builder builderInputValidation = new AlertDialog.Builder(getActivity());
+            builderInputValidation.setTitle("Nome de Usúario Inválido!");
+            builderInputValidation.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    //campoNome.setText("");
+                }
+            });
+
+            if(!campoNome.getText().toString().toUpperCase().matches("[A-Z]*")){
+                builderInputValidation.setMessage("O nome de usúario deve conter apenas letras.");
+                builderInputValidation.show();
+            }else{
+                if(campoNome.length() <= 4){
+                    builderInputValidation.setMessage("O nome de usúario deve ter mais de quatro letras.");
+                    builderInputValidation.show();
+                }else{
+                    return campoNome.getText().toString();
+                }
+            }
+        }catch (Exception ex){
+            Toast alertException = Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_LONG);
+            alertException.show();
+        }
+        return null;
     }
 }

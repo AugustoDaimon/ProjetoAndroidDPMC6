@@ -6,7 +6,7 @@ public class UserProfile {
     private String weight;
     private String goal;
     private int gender; // 0 para homi, 1 muie
-    private List<String> favoriteDishes;
+   // private List<String> favoriteDishes;
 
 
 
@@ -16,7 +16,7 @@ public class UserProfile {
         this.weight = weight;
         this.goal = goal;
         this.gender = gender;
-        this.favoriteDishes = new ArrayList<>();
+        //this.favoriteDishes = new ArrayList<>();
     }
 
 

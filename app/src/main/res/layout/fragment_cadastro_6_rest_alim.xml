@@ -40,18 +40,19 @@
             <RadioGroup
                 android:id="@+id/radioGroup"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-            <RadioButton
-                android:id="@+id/radioButtonSim"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sim" />
+                android:layout_height="match_parent">
+                <RadioButton
+                    android:id="@+id/radioButtonSim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sim" />
 
-            <RadioButton
-                android:id="@+id/radioButtonNao"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Não" />
+                <RadioButton
+                    android:id="@+id/radioButtonNao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Não" />
+            </RadioGroup>
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>
