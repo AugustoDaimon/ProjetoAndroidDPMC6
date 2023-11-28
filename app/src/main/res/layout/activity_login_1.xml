@@ -7,7 +7,8 @@
     android:foregroundTint="#000000"
     android:orientation="vertical"
     android:outlineAmbientShadowColor="#000000"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context=".Login.LoginActivity">
 
     <TextView
         android:id="@+id/textView4"
@@ -56,6 +57,12 @@
             android:gravity="center"
             android:text="Entrar"
             android:textColor="#FFFFFF" />
+
+        <CheckBox
+            android:id="@+id/checkGuardarDados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lembrar dados da conta"/>
 
         <TextView
             android:layout_width="wrap_content"
