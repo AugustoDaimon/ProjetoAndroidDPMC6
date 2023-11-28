@@ -7,17 +7,46 @@
     android:layout_height="match_parent">
 
 
-    <com.example.nutzen.PratosDoDia.PratosCardView
-        android:layout_width="300dp"
-        android:layout_height="150dp"
-        app:cardCornerRadius="20dp"/>
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <com.example.nutzen.PratosDoDia.PratosCardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="20dp"
+            app:nomePrato="Salada de Frutas"
+            app:calorias="101"
+            app:urlReceita="https://cybercook.com.br/receitas/doces/receita-de-salada-de-frutas-com-suco-de-laranja-3052"
+            app:urlImage="@drawable/prato_p_cafe_1"/>
+
+        <com.example.nutzen.PratosDoDia.PratosCardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="10dp"
+            app:cardCornerRadius="20dp"
+            app:nomePrato="Omelete"
+            app:calorias="154"
+            app:urlReceita="https://receitinhas.com.br/receitas-com-ovos-para-cafe-da-manha/#google_vignette"
+            app:urlImage="@drawable/prato_p_cafe_2"/>
+
+        <com.example.nutzen.PratosDoDia.PratosCardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="20dp"
+            app:nomePrato="Misto Quente"
+            app:calorias="284"
+            app:urlReceita="https://www.nespresso.com/recipes/br/pt/30003MIS-misto-quente-com-cappuccino.html"
+            app:urlImage="@drawable/prato_p_cafe_3"/>
     </LinearLayout>
 
 </FrameLayout>

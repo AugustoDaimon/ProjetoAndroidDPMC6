@@ -142,6 +142,7 @@ public class CadastroActivity extends AppCompatActivity {
                         }else{
                             novoUsuario.setRestricoesAlimentares(false);
                             fragmentosNaPilha++; // Pula o fragCadastro7
+                            btnContinuar.setVisibility(View.GONE); // Esconde o botão, frag8 usa botões proprios
                             loadFragment(fragCadastro8, "fragCadastro8");
                         }
                     }

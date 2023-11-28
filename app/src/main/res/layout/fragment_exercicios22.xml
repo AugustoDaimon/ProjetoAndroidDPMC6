@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".TempNavExercicios22">
+    tools:context=".Exercicios22Fragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
                 android:layout_width="350dp"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:layout_marginVertical="8dp"
+                android:layout_marginTop="8dp"
                 app:cardCornerRadius="20dp">
 
                 <RelativeLayout
@@ -41,7 +41,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="fitXY"
-                        android:src="@drawable/foto_prato_teste"
+                        android:src="@drawable/img_gym_superiores"
                         android:layout_alignParentStart="true"
                         />
 
@@ -52,7 +52,13 @@
                         android:layout_marginBottom="10dp"
                         android:layout_marginLeft="10dp"
                         android:textSize="30sp"
-                        android:text="Teste"
+                        android:shadowColor="@color/mainColor"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="5"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="SUPERIORES"
                         />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -72,7 +78,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="fitXY"
-                        android:src="@drawable/foto_prato_teste"
+                        android:src="@drawable/img_gym_inferiores"
                         android:layout_alignParentStart="true"
                         />
 
@@ -83,7 +89,13 @@
                         android:layout_marginBottom="10dp"
                         android:layout_marginLeft="10dp"
                         android:textSize="30sp"
-                        android:text="Teste"
+                        android:shadowColor="@color/mainColor"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="5"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="INFERIORES"
                         />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -91,7 +103,7 @@
                 android:layout_width="350dp"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:layout_marginVertical="8dp"
+                android:layout_marginBottom="20dp"
                 app:cardCornerRadius="20dp">
 
                 <RelativeLayout
@@ -103,7 +115,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="fitXY"
-                        android:src="@drawable/foto_prato_teste"
+                        android:src="@drawable/img_gym_abdomem"
                         android:layout_alignParentStart="true"
                         />
 
@@ -114,7 +126,13 @@
                         android:layout_marginBottom="10dp"
                         android:layout_marginLeft="10dp"
                         android:textSize="30sp"
-                        android:text="Teste"
+                        android:shadowColor="@color/mainColor"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="5"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="ABDÔMEN"
                         />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>

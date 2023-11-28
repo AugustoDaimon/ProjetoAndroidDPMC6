@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.nutzen.PratosDoDia.TempViewPagerPrincipalActivity;
+import com.example.nutzen.HomeActivity;
 import com.example.nutzen.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         loginButton.setOnClickListener(view -> {
-            Intent intent = new Intent(LoginActivity.this, TempViewPagerPrincipalActivity.class);
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
             startActivity(intent);
         });
     }

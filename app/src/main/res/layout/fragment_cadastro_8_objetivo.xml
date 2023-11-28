@@ -15,29 +15,24 @@
             android:id="@+id/btnGanharMassa"
             android:layout_width="268dp"
             android:layout_height="54dp"
-            android:layout_marginTop="252dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginTop="24dp"
             android:backgroundTint="@color/bg_botoes_cadastro"
             android:text="Ganhar massa"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@+id/button2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
         <Button
             android:id="@+id/btnPerderMassa"
             android:layout_width="268dp"
             android:layout_height="55dp"
-            android:layout_marginTop="11dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginTop="36dp"
             android:backgroundTint="@color/bg_botoes_cadastro"
             android:text="Perder massa"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@+id/textView7"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnGanharMassa" />
 
@@ -48,23 +43,22 @@
             android:layout_marginTop="184dp"
             android:text="Qual é o seu objetivo?"
             android:textSize="23dp"
-            app:layout_constraintBottom_toTopOf="@+id/btnGanharMassa"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="292dp"
             android:layout_height="40dp"
+            android:layout_marginTop="24dp"
             android:text="Obs.: Com base no seu IMC, é recomendado o objetivo de Ganhar ou Perder Massa"
             android:textColor="@color/blue"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="384dp" />
+            app:layout_constraintTop_toBottomOf="@+id/btnPerderMassa" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"

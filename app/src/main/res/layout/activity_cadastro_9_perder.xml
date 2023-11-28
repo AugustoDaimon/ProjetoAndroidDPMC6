@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/perder_massa_cadastro">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/perder_massa_cadastro"
+    tools:context=".Cadastro.Cadastro9PerderActivity">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_continuar"
@@ -20,6 +21,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.752"/>
+        app:layout_constraintVertical_bias="0.762"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_continuar"
+        >
+
+        <CheckBox
+            android:id="@+id/CheckBoxtermosDeUso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eu li e concordo com os "
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/txtTermosDeUSo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/CheckBoxtermosDeUso"
+            android:text="Termos de uso"
+            android:textStyle="bold"
+            android:textColor="@color/linkTermosDeUso" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,24 +11,31 @@
         android:layout_height="match_parent">
 
         <ImageView
+            android:id="@+id/imgPrato"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/foto_prato_teste"
             android:layout_alignParentStart="true"
             />
 
         <TextView
+            android:id="@+id/txtNomePrato"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
-            android:textSize="30sp"
-            android:text="Teste"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:shadowColor="@color/secondaryColor"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="8"
             />
 
         <ImageButton
+            android:id="@+id/btnFavoritar"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentRight="true"
@@ -40,15 +47,20 @@
             android:backgroundTint="@android:color/transparent"/>
 
         <TextView
+            android:id="@+id/txtCalorias"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
-            android:text="50kcal"
-            android:backgroundTint="@color/gray"/>
-
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:shadowColor="@color/white"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="20"/>
 
     </RelativeLayout>
 </merge>

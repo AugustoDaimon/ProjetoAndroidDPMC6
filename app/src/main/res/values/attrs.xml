@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PratosCardView">
+        <attr name="nomePrato" format="string" />
+        <attr name="calorias" format="integer" />
+        <attr name="urlImage" format="reference" />
+        <attr name="urlReceita" format="string" />
+    </declare-styleable>
+</resources>

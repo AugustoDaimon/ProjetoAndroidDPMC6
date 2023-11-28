@@ -36,9 +36,7 @@ public class PrincipalSlideAdapter extends FragmentStateAdapter {
         }
     }
 
-    public static class Principal15CafeScrollFragment extends Fragment { // TODO ? Renomear para ..SlideFragment
-        // https://developer.android.com/training/animation/screen-slide?hl=pt-br#pagetransformer
-        // https://medium.com/busoft/how-to-use-viewpager2-with-tablayout-in-android-eaf5b810ef7c
+    public static class Principal15CafeScrollFragment extends Fragment {
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -51,10 +49,7 @@ public class PrincipalSlideAdapter extends FragmentStateAdapter {
         }
     }
 
-    public static class Principal16AlmocoScrollFragment extends Fragment { // TODO ? Renomear para ..SlideFragment
-        // https://developer.android.com/training/animation/screen-slide?hl=pt-br#pagetransformer
-        // https://medium.com/busoft/how-to-use-viewpager2-with-tablayout-in-android-eaf5b810ef7c
-
+    public static class Principal16AlmocoScrollFragment extends Fragment {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View view = inflater.inflate(R.layout.fragment_principal_16_almoco_scroll, container, false);
@@ -66,10 +61,7 @@ public class PrincipalSlideAdapter extends FragmentStateAdapter {
         }
     }
 
-    public static class Principal17JantaScrollFragment extends Fragment { // TODO ? Renomear para ..SlideFragment
-        // https://developer.android.com/training/animation/screen-slide?hl=pt-br#pagetransformer
-        // https://medium.com/busoft/how-to-use-viewpager2-with-tablayout-in-android-eaf5b810ef7c
-
+    public static class Principal17JantaScrollFragment extends Fragment {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View view = inflater.inflate(R.layout.fragment_principal_17_janta_scroll, container, false);
